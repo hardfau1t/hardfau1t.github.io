@@ -37,7 +37,7 @@ int main() {
 }
 ```
 We get the output and we can be sure that our program works correctly  
-<sub>All the code is available in [this repo]()</sub>
+<sub>All the code is available in [this repo](https://github.com/hardfau18/blog-examples/tree/main/concurrency)</sub>
 ```
 gcc -o main.elf main.c -g3
 ./main.elf
@@ -123,7 +123,7 @@ In above diagram
 Thus at the end result is 18. But that's not what we expected, we expected to be like this
 ![Datarace](/assets/concurrency/expected_behaviour.png)  
 where **A** reads the `result` and modifies and writes back, after that **B** should have operated on `result`. A section/timeframe in which a thread accesses a shared data is called as **critical section**.
-In this **critical section** only one thread is allowed to enter.
+In this **critical section** only one thread is allowed to enter. For more information check this [wiki article](https://en.wikipedia.org/wiki/Race_condition#In_software)
 
 So how should we achieve this? You might have learned that for these kind of situation we can use **locks**. When we say locks there are many kinds of locks but in this situation 
 we will use **Mutexes** which allows us to access a shared region mutably during a **critical section**.
