@@ -1,16 +1,58 @@
-# The URL the site will be built for
 base_url = "https://hardfau18.github.io"
-
-# Whether to automatically compile all Sass files in the sass directory
+title = "hardault"
+description = "hardfault's static site"
+default_language = "en"
+theme = "serene"
+output_dir = "public"
 compile_sass = true
-
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+minify_html = true
+build_search_index = false            # Keep this false, search is temporarily unsupported
+generate_feed = false                 # Whether to generate a feed file in root, read docs for more info about rss feed
+feed_filename = "feed.xml"            # The file name of feed, "feed.xml" / "atom.xml" / "rss.xml", read docs for more info
+taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+extra_syntaxes = []
+highlight_theme = "one-dark"          # Code highlight theme, choose one at https://www.getzola.org/documentation/getting-started/configuration/#syntax-highlighting
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = false
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+#=========================================================================================
 
 [extra]
-# Put all your custom variables here
+
+name = "hardfault"
+id = "hardfau18"
+bio = "add missing bio"
+avatar = "img/avatar.webp"            # Your avatar
+links = [
+    { name = "GitHub", icon = "github", url = "https://github.com/hardfau18" },
+    { name = "Email", icon = "email", url = "mailto:<hardfau18@gmail.com>" },
+]
+
+nav_separator = "::"
+
+display_id = true
+projects_page = true
+blog_categorized = true
+blur_effect = true
+
+toc = true
+comment = false                       # Whether to show giscus comment section by default, see https://giscus.app for more info
+
+outdate_alert = false                 # Whether to show outdate alert by default
+outdate_alert_days = 360              # How many days will a post be outdated by default
+outdate_alert_text_before = "This article was last updated "
+outdate_alert_text_after = " days ago and may be out of date."
+
+footer_copyright = "© 2023 hardfau18"
+footer_credits = true

@@ -1,0 +1,6 @@
+[[project]]
+name = "blah"
+desc = "blha blah"
+links = [
+  { name = "foo", url = "" },
+]
