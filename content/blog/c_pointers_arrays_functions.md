@@ -1,7 +1,13 @@
----
-layout: post
-title: Demystifying pointers arrays and functions
----
++++
+title = "Demystifying pointers arrays and functions"
+date = 2023-07-31
+
+drafts = true
+
+[ taxonomies]
+categories = ["c"]
+tags = ["c", "pointers"]
++++
 
 In this article we go through whats a pointer, how it differs from arrays and function pointer.  
 Highly recommend [this](http://www.unixwiz.net/techtips/reading-cdecl.html "Reading C type declarations") article,
