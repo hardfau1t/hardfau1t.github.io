@@ -2,7 +2,7 @@
 title = "Demystifying pointers arrays and functions"
 date = 2023-07-31
 
-drafts = true
+draft = true
 
 [ taxonomies]
 categories = ["c"]
