@@ -32,7 +32,7 @@ anchors = "on"
 
 name = "hardfault"
 id = "hardfau18"
-bio = "add missing bio"
+bio = "An embedded/systems developer/Tinkerer, Linux enthuisiast"
 avatar = "img/avatar.webp"            # Your avatar
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/hardfau18" },
