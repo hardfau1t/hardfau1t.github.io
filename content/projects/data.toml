@@ -2,7 +2,8 @@
 name = "mscout"
 desc = "a mpd plugin which is written in rust which will listen on mpd events and based on that calculates ratings for songs."
 links = [
-  { name = "source", url = "https://github.com/hardfau18/mp_rater" },
+  { name = "source", url = "https://github.com/hardfau18/mscout" },
+  { name = "crates.io", url = "https://crates.io/crates/mscout" },
 ]
 
 [[project]]
