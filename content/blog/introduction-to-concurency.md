@@ -149,7 +149,16 @@ Thus at the end result is 18. But that's not what we expected, we expected to be
 where **A** reads the `result` and modifies and writes back, after that **B** should have operated on `result`. A section/timeframe in which a thread accesses a shared data is called as **critical section**.
 In this **critical section** only one thread is allowed to enter. For more information check this [wiki article](https://en.wikipedia.org/wiki/Race_condition#In_software)
 
-So how should we achieve this? You might have learned that for these kind of situation we can use **locks**. When we say locks there are many kinds of locks but in this situation 
+## Is it that bad?
+
+Looks like its just a calculation error, It should be ok right? 
+
+**No** computers are meant to be right and accurate, These kind of issues can cause **UB**(undefined behavior). Using this concept exploits like [Dirty Cow](https://en.wikipedia.org/wiki/Dirty_cow),
+which can best case crash the running program to giving full access to the given system.
+
+## Solution
+
+So how do we resolve this? You might have learned that for these kind of situation we can use **locks**. When we say locks there are many kinds of locks but in this situation 
 we will use **Mutexes** which allows us to access a shared region mutably during a **critical section**.
 When we lock a mutex we get ownership for the given critical section and no other thread can enter while we hold the lock ( or at least should not read/write the shared data).
 In early days pthread library used to provide mutexes, but after c11 we have mutexes in stdlib. Lets use that
@@ -202,4 +211,5 @@ as much as possible.
 
 ### Conclusion
 Single threaded code is safe and easy to write. But if its possible to use threads and parallelize then we could use mutexes and there are other ways for synchronization. Only thing to keep in mind that avoid sharing as much as possible, sharing is bad.
+
 In our case why threaded code runs at the same speed even with locks that's for another day, we will look into upcoming articles. If you like these articles feel free to share your opinion.
