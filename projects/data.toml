@@ -1,0 +1,28 @@
+[[project]]
+name = "mscout"
+desc = "a mpd plugin which is written in rust which will listen on mpd events and based on that calculates ratings for songs."
+links = [
+  { name = "source", url = "https://github.com/hardfau18/mscout" },
+  { name = "crates.io", url = "https://crates.io/crates/mscout" },
+]
+
+[[project]]
+name = "spacewar"
+desc = "a simple game written for stm32F767Zi, written in rust."
+links = [
+  { name = "source", url = "https://github.com/hardfau18/stm32f767zi-pal" },
+]
+
+[[project]]
+name = "stm32_pal"
+desc = "its a C project workspace made with makefiles and a library which provides all the structures to manipulate all the registers which is generated using svd file"
+links = [
+  { name = "source", url = "https://github.com/hardfau18/stm32f767zi-pal" },
+]
+
+[[project]]
+name = "Xarena"
+desc = "esports site written in python's Django for creating online game competetions."
+links = [
+  { name = "source", url = "https://github.com/hardfau18/Xarena" },
+]
